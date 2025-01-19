@@ -1,0 +1,1 @@
+export const API_URL = "http://34.224.216.26:3456/projectaws/api/v1/auth"
