@@ -1,6 +1,7 @@
 import User from "@/interfaces/User";
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
+import { deleteCookie, setCookie } from "cookies-next";
 
 export interface UserState {
   user?: User;
@@ -30,12 +31,16 @@ export const authSlice = createSlice({
       state.accessToken = accessToken;
       state.isLoggedIn = true;
       state.user = user
+
+      setCookie("auth", true)
     },
 
     logout: (state) => {
       state.user = {};
       state.accessToken = "";
       state.isLoggedIn = false;
+
+      deleteCookie("auth")
     },
 
     startLoading: (state) => {

@@ -19,6 +19,7 @@ export const apiLogin = async (data: LoginUser) => {
         response.data = res.data.data
 
     } catch (error) {
+        console.error(error)
         response.message = "Login failed!"
     } finally {
         return response
@@ -40,6 +41,7 @@ export const apiRegister = async (data: RegisterUser) => {
         response.data = res.data.data
 
     } catch (error) {
+        console.error(error)
         response.message = "Register failed!"
     } finally {
         return response

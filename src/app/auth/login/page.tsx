@@ -4,7 +4,7 @@ import AuthForm from "@/components/AuthForm";
 import { LoginUser } from "@/interfaces/User";
 import { endLoading, login, startLoading } from "@/stores/authSlice";
 import { useAppDispatch } from "@/stores/store";
-import { Button, Form, FormProps, Input, message, notification } from "antd";
+import { Button, Form, FormProps, Input, notification } from "antd";
 import { useRouter } from "next/navigation";
 import React from "react";
 
@@ -74,7 +74,7 @@ function Login() {
               },
             ]}
           >
-            <Input />
+            <Input placeholder="Nhập email của bạn" />
           </Form.Item>
 
           <Form.Item<LoginUser>
@@ -82,7 +82,7 @@ function Login() {
             name="password"
             rules={[{ required: true, message: "Vui lòng nhập mật khẩu!" }]}
           >
-            <Input.Password />
+            <Input.Password placeholder="Nhập mật khẩu của bạn" />
           </Form.Item>
 
           <Form.Item

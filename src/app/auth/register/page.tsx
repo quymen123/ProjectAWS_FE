@@ -4,7 +4,7 @@ import AuthForm from "@/components/AuthForm";
 import { RegisterUser } from "@/interfaces/User";
 import { endLoading, startLoading } from "@/stores/authSlice";
 import { useAppDispatch } from "@/stores/store";
-import { Button, Form, FormProps, Input, message, notification } from "antd";
+import { Button, Form, FormProps, Input, notification } from "antd";
 import { useRouter } from "next/navigation";
 import React from "react";
 
@@ -71,7 +71,7 @@ function Regsiter() {
               },
             ]}
           >
-            <Input />
+            <Input placeholder="Nhập email của bạn" />
           </Form.Item>
 
           <Form.Item<RegisterUser>
@@ -79,7 +79,7 @@ function Regsiter() {
             name="password"
             rules={[{ required: true, message: "Vui lòng nhập mật khẩu!" }]}
           >
-            <Input.Password />
+            <Input.Password placeholder="Nhập mật khẩu" />
           </Form.Item>
 
           <Form.Item<RegisterUser>
@@ -87,7 +87,7 @@ function Regsiter() {
             name="firstName"
             rules={[{ required: true, message: "Vui lòng nhập họ, tên đệm!" }]}
           >
-            <Input />
+            <Input placeholder="Nhập họ tên đệm" />
           </Form.Item>
 
           <Form.Item<RegisterUser>
@@ -95,7 +95,7 @@ function Regsiter() {
             name="lastName"
             rules={[{ required: true, message: "Vui lòng nhập tên!" }]}
           >
-            <Input />
+            <Input placeholder="Nhập tên" />
           </Form.Item>
 
           <Form.Item

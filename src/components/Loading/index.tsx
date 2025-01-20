@@ -1,6 +1,7 @@
 import React from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import style from "./Loading.module.css";
+import loadingJson from "@/assets/jsons/loading.json";
 
 function Loading() {
   return (
@@ -8,7 +9,7 @@ function Loading() {
       <Player
         autoplay
         loop
-        src={require("../../assets/jsons/loading.json")}
+        src={loadingJson}
         style={{ height: "100px", width: "100px" }}
       />
     </div>
